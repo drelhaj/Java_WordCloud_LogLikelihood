@@ -30,3 +30,9 @@ LogLikelihood Java Word Clouds is an open source command-line application to mak
 
 # Input/Output file format
 LogLikelihood Java Word Clouds works with UTF-8 file format for both input and output.
+
+# Sample Output
+![alt tag](https://github.com/drelhaj/LogLikelihood_Java/blob/master/CloudsSample/LLHCloudJS.png)
+![alt tag](https://github.com/drelhaj/LogLikelihood_Java/blob/master/CloudsSample/LLHCloudJSArabic.png)
+![alt tag](https://github.com/drelhaj/LogLikelihood_Java/blob/master/CloudsSample/LLHCloudJava.png)
+![alt tag](https://github.com/drelhaj/LogLikelihood_Java/blob/master/CloudsSample/LLHCloudJavaArabic.png)
