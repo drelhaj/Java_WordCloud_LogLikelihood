@@ -1,5 +1,6 @@
 package com.stats;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Paths;
@@ -9,7 +10,7 @@ public class WordCloudCreator {
 	protected int corpusSize;
 	protected static int cloudType;
 
-	private static PrintWriter writer, writer2;
+	private static PrintWriter writer, writer2, writer3;
 
 	public WordCloudCreator() {
 
@@ -25,11 +26,21 @@ public class WordCloudCreator {
 			throws IOException {
 		WordCloudCreator llh = new WordCloudCreator(type);
 		llh.setCloudType(type);
-		String csvFile = "llhCloud/data.csv";
+		File sysDir = new File("sysCSV/");
+		sysDir.mkdirs();
+		String csvFile = sysDir.toString() + "/data.csv";
 
 		writer = new PrintWriter(csvFile, "UTF-8");
 		writer.println("text" + "," + "size");
 		writer.flush();
+
+		File jsCloudDir = new File("llhCloud/");
+		jsCloudDir.mkdirs();
+		String jsCloudFile = jsCloudDir.toString() + "/data.csv";
+
+		writer3 = new PrintWriter(jsCloudFile, "UTF-8");
+		writer3.println("text" + "," + "size");
+		writer3.flush();
 
 		if (userOutputFile.length() > 1) {
 			writer2 = new PrintWriter(userOutputFile, "UTF-8");
@@ -49,6 +60,8 @@ public class WordCloudCreator {
 			System.out.println("LLH of: " + keyword + " = " + logLL);
 			writer.println(keyword + "," + logLL + "_" + llhSrc.wordCount);
 			writer.flush();
+			writer3.println(keyword + "," + logLL + "," + llhSrc.wordCount);
+			writer3.flush();
 			if (userOutputFile.length() > 1) {
 				writer2.println(keyword + "," + logLL + "," + llhSrc.wordCount);
 				writer2.flush();
@@ -56,6 +69,8 @@ public class WordCloudCreator {
 		}
 
 		writer.close();
+		writer2.close();
+		writer3.close();
 		LLH_Interface.main(type);
 
 	}

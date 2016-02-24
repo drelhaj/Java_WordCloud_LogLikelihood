@@ -22,7 +22,7 @@ public class LLH_Interface {
 	protected void initUI() throws IOException {
 		int type = WordCloudCreator.cloudType;
 
-		array = ReadCSV.readCSV("llhCloud/data.csv");
+		array = ReadCSV.readCSV("sysCSV/data.csv");
 		String[] words = new String[array.length];
 		double[] size = new double[array.length];
 		int[] freq = new int[array.length];
@@ -32,24 +32,28 @@ public class LLH_Interface {
 			freq[row] = Integer.parseInt(array[row][1].trim().substring(array[row][1].trim().indexOf("_") + 1));
 
 		}
+		String frameTitle = "Word Cloud";
+		if (type == 0)
+			frameTitle = "Word Frequency Word Cloud";
+		else
+			frameTitle = "Log Likelihood Word Cloud";
 
-		final JFrame frame = new JFrame("LL Word Cloud");
+		final JFrame frame = new JFrame(frameTitle);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JPanel panel = new JPanel();
 		Cloud cloud = new Cloud();
-		if(type == 1){
-		for (int i = 0; i < words.length; i++) {
-			for (double x = size[i]; x > 0; x--) {
-				cloud.addTag(words[i]);
+		if (type == 1) {
+			for (int i = 0; i < words.length; i++) {
+				for (double x = size[i]; x > 0; x--) {
+					cloud.addTag(words[i]);
+				}
 			}
-		}
-		}
-		else{
+		} else {
 			for (int i = 0; i < words.length; i++) {
 				for (double x = freq[i]; x > 0; x--) {
 					cloud.addTag(words[i]);
 				}
-			}	
+			}
 		}
 		for (Tag tag : cloud.tags()) {
 			int rand = randomWithRange(1, 75);
@@ -61,8 +65,8 @@ public class LLH_Interface {
 				label.setDirection(Direction.VERTICAL_UP);
 
 			DecimalFormat f = new DecimalFormat("##.0000");
-			label.setToolTipText("<html><p>LL = " + f.format(size[Arrays.asList(words).indexOf(tag.getName())]) + "</p> <p>Freq = "
-					+ freq[Arrays.asList(words).indexOf(tag.getName())] + "</p></html>");
+			label.setToolTipText("<html><p>LL = " + f.format(size[Arrays.asList(words).indexOf(tag.getName())])
+					+ "</p> <p>Freq = " + freq[Arrays.asList(words).indexOf(tag.getName())] + "</p></html>");
 			label.setFont(label.getFont().deriveFont((float) tag.getWeight() * 10 + 10));
 			float hue = (float) Math.random();
 			int rgb = Color.HSBtoRGB(hue, 0.9f, 0.6f);
