@@ -33,11 +33,11 @@ LogLikelihood Java Word Clouds works with UTF-8 file format for both input and o
 
 # Sample Output
 * Java Word Cloud </br> </br>
-![alt tag](https://github.com/drelhaj/LogLikelihood_Java/blob/master/CloudsSample/LLHCloudJava.png)
+![alt tag](https://github.com/drelhaj/LogLikelihood_Java/blob/master/cloudssample/llhcloudjava.png)
 * Java Word Cloud Arabic </br> </br>
-![alt tag](https://github.com/drelhaj/LogLikelihood_Java/blob/master/CloudsSample/LLHCloudJavaArabic.png)
+![alt tag](https://github.com/drelhaj/LogLikelihood_Java/blob/master/cloudssample/llhcloudJavaarabic.png)
 * d3 Javascript Word Cloud </br> </br>
-![alt tag](https://github.com/drelhaj/LogLikelihood_Java/blob/master/CloudsSample/LLHCloudJS.png)
+![alt tag](https://github.com/drelhaj/LogLikelihood_Java/blob/master/cloudssample/llhcloudjs.png)
 * d3 Javascript Word Cloud Arabic </br> </br>
-![alt tag](https://github.com/drelhaj/LogLikelihood_Java/blob/master/CloudsSample/LLHCloudJSArabic.png)
+![alt tag](https://github.com/drelhaj/LogLikelihood_Java/blob/master/cloudssample/llhcloudjsarabic.png)
 
