@@ -22,25 +22,25 @@ public class Main {
 			System.exit(0);
 		}
 
-		// make sure input file exists before calling the Kwic readFile method
+		// check number of arguments
 		if (args.length > 5 || args.length < 4) {
 			System.out.println("Wrong number of arguments! Type help!");
 			System.exit(0);
 		}
 
-		// make sure input file exists before calling the Kwic readFile method
+		// make sure src file exists before calling the LLH_Cloud readFile method
 		if (!new File(args[0]).exists()) {
 			System.out.println("Src file doesn't exist!!");
 			System.exit(0);
 		}
 
-		// make sure input file exists before calling the Kwic readFile method
+		// make sure ref file exists before calling the LLH_Cloud readFile method
 		if (!new File(args[1]).exists()) {
 			System.out.println("Ref file doesn't exist!!");
 			System.exit(0);
 		}
 
-		// make sure input file exists before calling the Kwic readFile method
+		// make sure keywords file exists before calling the LLH_Cloud readFile method
 		if (!new File(args[2]).exists()) {
 			System.out.println("Keywords file doesn't exist!!");
 			System.exit(0);
@@ -54,10 +54,8 @@ public class Main {
 			System.exit(0);
 		}
 
-		// Make sure output file is valid (further validation could be helful
-		// here e.g. Linux vs Windows naming the use of special characters and
-		// reserved names)
-		if (!isParsable(args[3])) {
+		// Validate wordcloud type (1 creates a word cloud using LLH values, \n 0 create word cloud using word frequencies
+		if (!ValidateIntegers.isParsable(args[3])) {
 			System.out.println("Invalid wordCloud type!");
 			System.exit(0);
 		} else {
@@ -71,29 +69,18 @@ public class Main {
 		String ref = args[1];
 		String keywordsFile = args[2];
 		int type = Integer.parseInt(args[3]);
-		// check number of arguments as the output file is optional the method
-		// can be called with the output file length = 0 and output will be
-		// printed on console.
+		// check number of arguments as the output file is optional 
+		// the method can be called with the output file length = 0
 		if (args.length == 4) {
-			LLH.LLH_WordCloud(src, ref, keywordsFile, "", type);
+			WordCloudCreator.LLH_WordCloud(src, ref, keywordsFile, "", type);
 
 		} else {
 			String userOutputFile = args[4];
-			LLH.LLH_WordCloud(src, ref, keywordsFile, userOutputFile, type);
+			WordCloudCreator.LLH_WordCloud(src, ref, keywordsFile, userOutputFile, type);
 
 		}
 	}
 
-	// To check wether integer window size inserter by the user are parsable to
-	// integer
-	public static boolean isParsable(String input) {
-		boolean parsable = true;
-		try {
-			Integer.parseInt(input);
-		} catch (NumberFormatException e) {
-			parsable = false;
-		}
-		return parsable;
-	}
+
 
 }

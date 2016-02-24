@@ -20,7 +20,7 @@ public class LLH_Interface {
 	String[][] array;
 
 	protected void initUI() throws IOException {
-		int type = LLH.cloudType;
+		int type = WordCloudCreator.cloudType;
 
 		array = ReadCSV.readCSV("llhCloud/data.csv");
 		String[] words = new String[array.length];

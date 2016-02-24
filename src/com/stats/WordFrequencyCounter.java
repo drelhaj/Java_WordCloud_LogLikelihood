@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 public class WordFrequencyCounter {
 
 	
-	public static LLH countWordFreq(String word, Path path) throws IOException {
+	public static WordCloudCreator countWordFreq(String word, Path path) throws IOException {
 
 		String text;
 		int wordFreq = 0;
@@ -66,7 +66,7 @@ public class WordFrequencyCounter {
 			text = "";// empty text
 
 		}
-		return new LLH(wordFreq, wordCount);
+		return new WordCloudCreator(wordFreq, wordCount);
 
 	}
 	
