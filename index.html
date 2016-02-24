@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Java word cloud with Log Likelihood : Java tool to create word cloud by calculating frequencies and log Likelihood for a word between two large corpora">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Java word cloud with Log Likelihood</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/drelhaj/Java_WordCloud_LogLikelihood">View on GitHub</a>
+
+          <h1 id="project_title">Java word cloud with Log Likelihood</h1>
+          <h2 id="project_tagline">Java tool to create word cloud by calculating frequencies and log Likelihood for a word between two large corpora</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/drelhaj/Java_WordCloud_LogLikelihood/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/drelhaj/Java_WordCloud_LogLikelihood/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="log-likelihood-java-word-clouds" class="anchor" href="#log-likelihood-java-word-clouds" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Log Likelihood Java Word Clouds</h1>
+
+<p>Java tool to create word clouds using log Likelihood and word frequencies. Log Likelihood is calculated for a word between two large corpora</p>
+
+<p>The tool is language independent and was tested on Arabic and English</p>
+
+<p>The system takes source and reference corpora text files as input and calculate log likelihood and frequencies for a set of keywords input from the user side.
+The system creates word clouds using java and the output also supports d3 Javascript word clouds which is provided alongside this project, check the llhCloud folder for the javascript and data.csv files, the javascript file has been modified to
+support log likelihood values as the keywords weight, basically the bigger the value the larger the text.</p>
+
+<p>The java word clouds include a tooltip text feature to show the frequency and log likelihood value for each keyword.</p>
+
+<h1>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h1>
+
+<ul>
+<li>Requires java to run, the system was not tested on Java 8 but considering the library used it should run smoothly.</li>
+<li>Has been tested on both Linux and Windows and run smoothly on both.</li>
+<li>Has been tested on large files.</li>
+<li>The system runs in a UTF-8 environment by default and was confirmed to work with Linux, however Windows users: by setting the (Windows) environment variable JAVA_TOOL_OPTIONS to -Dfile.encoding=UTF8, the (Java) System property will be set automatically every time a JVM is started. </li>
+</ul>
+
+<h1>
+<a id="execution" class="anchor" href="#execution" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Execution</h1>
+
+<ul>
+<li><p>The tool has a CLI interface only but uses java swing to create the Java word clouds.</p></li>
+<li><p>Running LogLikelihood Java Word Clouds from command line is fairly simple.
+For further information you can use the help command.</p></li>
+</ul>
+
+<p>To run LogLikelihood Java Word Clouds you need SourceFile, ReferenceFile, KeywordsFile, WordCloudType, OutputFile (Optional):</p>
+
+<ul>
+<li>Example: src.txt ref.txt keywords.txt 1 output.csv</li>
+<li>The WordCloudType determines the wordcloud plotting process, the word cloud keywords size (font size) will change according to the keyword Log Likelihood value (1) or word frequency value (0).</li>
+<li>The javascript only works with log Likelihood values for font size but should be very easy to work with word frequency instead. All you need to do is change "size" to "freq" in the script.js file.
+# Interface
+LogLikelihood Java Word Clouds is an open source command-line application to make it easy to integrate with other systems.</li>
+</ul>
+
+<h1>
+<a id="inputoutput-file-format" class="anchor" href="#inputoutput-file-format" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Input/Output file format</h1>
+
+<p>LogLikelihood Java Word Clouds works with UTF-8 file format for both input and output.</p>
+
+<h1>
+<a id="sample-output" class="anchor" href="#sample-output" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sample Output</h1>
+
+<ul>
+<li>Java Word Cloud  
+<img src="https://github.com/drelhaj/LogLikelihood_Java/blob/master/CloudsSample/LLHCloudJava.png" alt="alt tag">
+</li>
+<li>Java Word Cloud Arabic  
+<img src="https://github.com/drelhaj/LogLikelihood_Java/blob/master/CloudsSample/LLHCloudJavaArabic.png" alt="alt tag">
+</li>
+<li>d3 Javascript Word Cloud  
+<img src="https://github.com/drelhaj/LogLikelihood_Java/blob/master/CloudsSample/LLHCloudJS.png" alt="alt tag">
+</li>
+<li>d3 Javascript Word Cloud Arabic  
+<img src="https://github.com/drelhaj/LogLikelihood_Java/blob/master/CloudsSample/LLHCloudJSArabic.png" alt="alt tag">
+</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Java word cloud with Log Likelihood maintained by <a href="https://github.com/drelhaj">drelhaj</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-74247381-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
