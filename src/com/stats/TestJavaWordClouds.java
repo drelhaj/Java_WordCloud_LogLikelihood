@@ -10,17 +10,22 @@ package com.stats;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Paths;
+
 /**
- * Test class to make two word clouds using a soruce, a reference and a keywords text files.
+ * Test class to make two word clouds using a soruce, a reference and a keywords
+ * text files.
+ * 
  * @author elhaj
  *
  */
 public class TestJavaWordClouds {
-/**
- * Test method to create two word clouds using a source, reference corpora and a keywords text file.
- * @param args
- * @throws IOException
- */
+	/**
+	 * Test method to create two word clouds using a source, reference corpora
+	 * and a keywords text file.
+	 * 
+	 * @param args
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws IOException {
 		Charset.defaultCharset();
 		System.setProperty("file.encoding", "UTF-8");

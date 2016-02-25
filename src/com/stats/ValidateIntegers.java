@@ -6,8 +6,10 @@
  */
 
 package com.stats;
+
 /**
  * simple integer validator
+ * 
  * @author elhaj
  *
  */

@@ -6,9 +6,11 @@
  */
 
 package com.stats;
+
 /**
- * calculates log likelihood between a source and a reference corpus
- * for more details on LLH please visit: http://ucrel.lancs.ac.uk/llwizard.html
+ * calculates log likelihood between a source and a reference corpus for more
+ * details on LLH please visit: http://ucrel.lancs.ac.uk/llwizard.html
+ * 
  * @author elhaj
  *
  */

@@ -11,9 +11,12 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Paths;
+
 /**
- * Main CLI application to run the code (you don't actually need to use this if you know your way with Java)
- * check the {@link TestJavaWordClouds} class for more details. 
+ * Main CLI application to run the code (you don't actually need to use this if
+ * you know your way with Java) check the {@link TestJavaWordClouds} class for
+ * more details.
+ * 
  * @author elhaj
  *
  */

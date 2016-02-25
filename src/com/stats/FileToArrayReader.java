@@ -5,16 +5,18 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * Reading a text file into an array of strings.
+ * 
  * @author elhaj
  *
  */
 public class FileToArrayReader {
 
-	
 	/**
 	 * read text file into Array (using line breaks)
+	 * 
 	 * @param filename
 	 * @return String array
 	 * @throws IOException
@@ -30,5 +32,5 @@ public class FileToArrayReader {
 		bufferedReader.close();
 		return lines.toArray(new String[lines.size()]);
 	}
-	
+
 }

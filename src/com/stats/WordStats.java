@@ -11,12 +11,14 @@ public class WordStats {
 
 	protected int wordCount;
 	protected int corpusSize;
-/**
- * gets word count and corpus size (number of words). Didn't add sets methods as I didn't 
- * need them, please feel free to add them if needed.
- * @param wordCount
- * @param corpusSize
- */
+
+	/**
+	 * gets word count and corpus size (number of words). Didn't add sets
+	 * methods as I didn't need them, please feel free to add them if needed.
+	 * 
+	 * @param wordCount
+	 * @param corpusSize
+	 */
 	public WordStats(int wordCount, int corpusSize) {
 
 		this.wordCount = wordCount;

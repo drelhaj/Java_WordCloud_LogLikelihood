@@ -7,10 +7,10 @@ import java.util.LinkedList;
 
 public class ReadCSV {
 
-	
-	public ReadCSV() throws IOException{
+	public ReadCSV() throws IOException {
 		System.err.println("CSV File Doesn't Exist");
 	}
+
 	/**
 	 * Read a csv file and store values in a 2D array
 	 * 

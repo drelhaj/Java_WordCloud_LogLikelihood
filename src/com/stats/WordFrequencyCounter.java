@@ -15,8 +15,10 @@ import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 /**
  * Count word frequency and input text file size in words
+ * 
  * @author elhaj
  *
  */

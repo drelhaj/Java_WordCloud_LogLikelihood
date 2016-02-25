@@ -10,8 +10,11 @@ package com.stats;
 import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
- * count number of words in a text file and return the value as the corpus size in words
+ * count number of words in a text file and return the value as the corpus size
+ * in words
+ * 
  * @author elhaj
  *
  */
@@ -34,5 +37,5 @@ public class CorpusSize {
 
 		return words.size();
 	}
-	
+
 }
