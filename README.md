@@ -16,7 +16,7 @@ The java word clouds include a tooltip text feature to show the value of the wei
 
 # Execution
 * The tool has a CLI interface and uses java swing to create the Java word clouds.
-* For those who know their way with java there is a test class which gives a glimps on how the methods work.
+* For those who know their way with java there is a test class which gives a glimpse on how the methods work.
 * Running LogLikelihood Java Word Clouds from command line is fairly simple.
 For further information you can use the help command.
 
