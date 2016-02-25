@@ -1,48 +1,44 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Java word cloud with Log Likelihood : Java tool to create word cloud by calculating frequencies and log Likelihood for a word between two large corpora">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-    <title>Java word cloud with Log Likelihood</title>
+    <title>Java word cloud with Log Likelihood by drelhaj</title>
   </head>
 
   <body>
+    <header>
+      <div class="inner">
+        <h1>Java word cloud with Log Likelihood</h1>
+        <h2>Java tool to create word cloud by calculating frequencies and log Likelihood for a word between two large corpora</h2>
+        <a href="https://github.com/drelhaj/Java_WordCloud_LogLikelihood" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/drelhaj/Java_WordCloud_LogLikelihood">View on GitHub</a>
-
-          <h1 id="project_title">Java word cloud with Log Likelihood</h1>
-          <h2 id="project_tagline">Java tool to create word cloud by calculating frequencies and log Likelihood for a word between two large corpora</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/drelhaj/Java_WordCloud_LogLikelihood/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/drelhaj/Java_WordCloud_LogLikelihood/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
 <a id="loglikelihood-java-word-clouds" class="anchor" href="#loglikelihood-java-word-clouds" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LogLikelihood Java Word Clouds</h1>
 
-<p>Java tool to create word clouds using log Likelihood and word frequencies. Log Likelihood is calculated for a word between two large corpora</p>
-
-<p>The tool is language independent and was tested on Arabic and English</p>
+<p>Java tool to create word clouds using log Likelihood and word frequencies (or any other weight values). 
+Log Likelihood is calculated for a word between two large corpora input that could be in any language. The tool is language independent and was tested on Arabic and English</p>
 
 <p>The system takes source and reference corpora text files as input and calculate log likelihood and frequencies for a set of keywords input from the user side.
-The system creates word clouds using java and the output also supports d3 Javascript word clouds which is provided alongside this project, check the llhCloud folder for the javascript and data.csv files, the javascript file has been modified to
+The system creates word clouds using java and I also provide file for d3 Javascript word clouds alongside this project, check the llhCloud folder for the javascript and data.csv files, the javascript file has been modified to
 support log likelihood values as the keywords weight, basically the bigger the value the larger the text.</p>
 
-<p>The java word clouds include a tooltip text feature to show the frquency and log likelihood value for each keyword.</p>
+<p>The java word clouds include a tooltip text feature to show the value of the weight used.</p>
 
 <h1>
 <a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h1>
@@ -58,37 +54,49 @@ support log likelihood values as the keywords weight, basically the bigger the v
 <a id="execution" class="anchor" href="#execution" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Execution</h1>
 
 <ul>
-<li><p>The tool has a CLI interface only but uses java swing to create the Java word clouds.</p></li>
-<li><p>Running LogLikelihood Java Word Clouds from command line is fairly simple.
-For further information you can use the help command.</p></li>
+<li>The tool has a CLI interface and uses java swing to create the Java word clouds.</li>
+<li>For those who know their way with java there is a test class which gives a glimpse on how the methods work.</li>
+<li>Running LogLikelihood Java Word Clouds from command line is fairly simple.
+For further information you can use the help command.</li>
 </ul>
 
-<p>To run LogLikelihood Java Word Clouds you need SourceFile, ReferenceFile, KeywordsFile, WordCloudType, OutputFile (Optional):</p>
+<p>To run LogLikelihood Java Word Clouds you need SourceFile, ReferenceFile, KeywordsFile, OutputFile and OutputMethod:</p>
 
 <ul>
-<li>Example: src.txt ref.txt keywords.txt 1 output.csv</li>
-<li>The WordCloudType determines the wordcloud plotting process, the word cloud keywords size (font size) will change according to the keyword Log Likelihood value (1) or word frequency value (0).</li>
-<li>The javascript only works with log Likelihood values for font size but should be very easy to work with word frequency instead. All you need to do is change "size" to "freq" in the script.js file.
-# Interface
-LogLikelihood Java Word Clouds is an open source command-line application to make it easy to integrate with other systems.</li>
+<li>Example: src.txt ref.txt keywords.txt output.csv 1</li>
+<li>The OutputMethod determines the values saved to the user output. 1: saves words and their LLH values, 2: saves words and their frequency count in the source corpus, 3: saves words alongside LLH and frequency counts.</li>
+<li>To run the javascript file on your server or localhost you need to make sure the csv file contains the correct values, check the readme file in the llhCloud directory.</li>
 </ul>
+
+<h1>
+<a id="interface" class="anchor" href="#interface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Interface</h1>
+
+<p>LogLikelihood Java Word Clouds is an open source command-line application. The method and classes are independent from each others to make it easy to integrate with other systems (e.g. you can count frequencies or calculate Log Likelihood without the need to create word clouds)</p>
 
 <h1>
 <a id="inputoutput-file-format" class="anchor" href="#inputoutput-file-format" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Input/Output file format</h1>
 
 <p>LogLikelihood Java Word Clouds works with UTF-8 file format for both input and output.</p>
-      </section>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/drelhaj/Java_WordCloud_LogLikelihood/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/drelhaj/Java_WordCloud_LogLikelihood/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/drelhaj/Java_WordCloud_LogLikelihood"></a> is maintained by <a href="https://github.com/drelhaj">drelhaj</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Java word cloud with Log Likelihood maintained by <a href="https://github.com/drelhaj">drelhaj</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-              <script type="text/javascript">
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -98,7 +106,6 @@ LogLikelihood Java Word Clouds is an open source command-line application to mak
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
