@@ -12,7 +12,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Paths;
 
 /**
- * Test class to make two word clouds using a soruce, a reference and a keywords
+ * Test class to make two word clouds using a source, a reference and a keywords
  * text files.
  * 
  * @author elhaj
