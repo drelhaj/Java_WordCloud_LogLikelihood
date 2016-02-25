@@ -30,9 +30,9 @@ public class TestJavaWordClouds {
 		Charset.defaultCharset();
 		System.setProperty("file.encoding", "UTF-8");
 
-		String src = "test/srcAr.txt";// user source file (corpus)
-		String ref = "test/refAr.txt";// user reference file (corpus)
-		String keywordsFile = "test/keywordsAr.txt";
+		String src = "test/src.txt";// user source file (corpus)
+		String ref = "test/ref.txt";// user reference file (corpus)
+		String keywordsFile = "test/keywords.txt";
 
 		// read user's keywords file into array (alternatively provide an array
 		// of words)
