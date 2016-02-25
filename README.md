@@ -1,13 +1,12 @@
 # LogLikelihood Java Word Clouds
-Java tool to create word clouds using log Likelihood and word frequencies. Log Likelihood is calculated for a word between two large corpora
-
-The tool is language independent and was tested on Arabic and English
+Java tool to create word clouds using log Likelihood and word frequencies (or any other weight values). 
+Log Likelihood is calculated for a word between two large corpora input that could be in any language. The tool is language independent and was tested on Arabic and English
 
 The system takes source and reference corpora text files as input and calculate log likelihood and frequencies for a set of keywords input from the user side.
-The system creates word clouds using java and the output also supports d3 Javascript word clouds which is provided alongside this project, check the llhCloud folder for the javascript and data.csv files, the javascript file has been modified to
+The system creates word clouds using java and I also provide file for d3 Javascript word clouds alongside this project, check the llhCloud folder for the javascript and data.csv files, the javascript file has been modified to
 support log likelihood values as the keywords weight, basically the bigger the value the larger the text.
 
-The java word clouds include a tooltip text feature to show the frquency and log likelihood value for each keyword.
+The java word clouds include a tooltip text feature to show the value of the weight used.
 
 # Requirements
 * Requires java to run, the system was not tested on Java 8 but considering the library used it should run smoothly.
@@ -16,17 +15,18 @@ The java word clouds include a tooltip text feature to show the frquency and log
 * The system runs in a UTF-8 environment by default and was confirmed to work with Linux, however Windows users: by setting the (Windows) environment variable JAVA_TOOL_OPTIONS to -Dfile.encoding=UTF8, the (Java) System property will be set automatically every time a JVM is started. 
 
 # Execution
-* The tool has a CLI interface only but uses java swing to create the Java word clouds.
-
+* The tool has a CLI interface and uses java swing to create the Java word clouds.
+* For those who know their way with java there is a test class which gives a glimps on how the methods work.
 * Running LogLikelihood Java Word Clouds from command line is fairly simple.
 For further information you can use the help command.
 
-To run LogLikelihood Java Word Clouds you need SourceFile, ReferenceFile, KeywordsFile, WordCloudType, OutputFile (Optional):
-* Example: src.txt ref.txt keywords.txt 1 output.csv
-* The WordCloudType determines the wordcloud plotting process, the word cloud keywords size (font size) will change according to the keyword Log Likelihood value (1) or word frequency value (0).
-* The javascript only works with log Likelihood values for font size but should be very easy to work with word frequency instead. All you need to do is change "size" to "freq" in the script.js file.
+To run LogLikelihood Java Word Clouds you need SourceFile, ReferenceFile, KeywordsFile, OutputFile and OutputMethod:
+* Example: src.txt ref.txt keywords.txt output.csv 1
+* The OutputMethod determines the values saved to the user output. 1: saves words and their LLH values, 2: saves words and their frequency count in the source corpus, 3: saves words alongside LLH and frequency counts.
+* To run the javascript file on your server or localhost you need to make sure the csv file contains the correct values, check the readme file in the llhCloud directory.
+
 # Interface
-LogLikelihood Java Word Clouds is an open source command-line application to make it easy to integrate with other systems.
+LogLikelihood Java Word Clouds is an open source command-line application. The method and classes are independent from each others to make it easy to integrate with other systems (e.g. you can count frequencies or calculate Log Likelihood without the need to create word clouds)
 
 # Input/Output file format
 LogLikelihood Java Word Clouds works with UTF-8 file format for both input and output.
