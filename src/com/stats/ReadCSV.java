@@ -15,7 +15,7 @@ public class ReadCSV {
 	 * Read a csv file and store values in a 2D array
 	 * 
 	 * @param csvFile
-	 * @return
+	 * @return return a two dimentional array.
 	 * @throws IOException
 	 */
 	public static String[][] readCSV(String csvFile) throws IOException {

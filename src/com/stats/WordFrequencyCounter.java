@@ -1,3 +1,10 @@
+/*
+ * Copyright 2016 (C) Dr Mahmoud El-Haj
+ * 
+ * Created on : Feb-2016
+ * Author     : drelhaj (https://github.com/drelhaj/)
+ */
+
 package com.stats;
 
 import java.io.IOException;
@@ -8,11 +15,24 @@ import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+/**
+ * Count word frequency and input text file size in words
+ * @author elhaj
+ *
+ */
 public class WordFrequencyCounter {
 
-	
-	public static WordCloudCreator countWordFreq(String word, Path path) throws IOException {
+	/**
+	 * Using a word and a text file this class returns a word's frequency and
+	 * the size of the text file in words. such information is needed to
+	 * calculate log likelihood but could also be very useful for other stuff.
+	 * 
+	 * @param word
+	 * @param path
+	 * @return WordStats object values
+	 * @throws IOException
+	 */
+	public static WordStats countWordFreq(String word, Path path) throws IOException {
 
 		String text;
 		int wordFreq = 0;
@@ -66,8 +86,8 @@ public class WordFrequencyCounter {
 			text = "";// empty text
 
 		}
-		return new WordCloudCreator(wordFreq, wordCount);
+		return new WordStats(wordFreq, wordCount);
 
 	}
-	
+
 }

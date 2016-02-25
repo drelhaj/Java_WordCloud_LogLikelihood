@@ -1,5 +1,17 @@
-package com.stats;
+/*
+ * Copyright 2016 (C) Dr Mahmoud El-Haj
+ * 
+ * Created on : Feb-2016
+ * Author     : drelhaj (https://github.com/drelhaj/)
+ */
 
+package com.stats;
+/**
+ * calculates log likelihood between a source and a reference corpus
+ * for more details on LLH please visit: http://ucrel.lancs.ac.uk/llwizard.html
+ * @author elhaj
+ *
+ */
 public class LlhCalculator {
 
 	/**
@@ -12,7 +24,7 @@ public class LlhCalculator {
 	 *            size of your corpus in words
 	 * @param corpus2Size
 	 *            size of the reference corpus in words
-	 * @return
+	 * @return double value
 	 */
 	public static double logLikeliHood(int word1Freq, int word2Freq, int corpus1Size, int corpus2Size) {
 		double llh = 0;

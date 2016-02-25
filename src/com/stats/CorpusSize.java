@@ -1,9 +1,20 @@
+/*
+ * Copyright 2016 (C) Dr Mahmoud El-Haj
+ * 
+ * Created on : Feb-2016
+ * Author     : drelhaj (https://github.com/drelhaj/)
+ */
+
 package com.stats;
 
 import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * count number of words in a text file and return the value as the corpus size in words
+ * @author elhaj
+ *
+ */
 public class CorpusSize {
 
 	// iterates over text to extract words through detecting boundaries in text
