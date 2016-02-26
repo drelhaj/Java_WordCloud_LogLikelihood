@@ -12,7 +12,7 @@ The java word clouds include a tooltip text feature to show the value of the wei
 * Language independent
 * random colouring
 * Create Log likelihood and word frequency word clouds
-* can also create word clouds for a user choesen weight value you just need to provide an array of double values
+* can also create word clouds for a user chosen weight value you just need to provide an array of double values
 * you can drag drop words to match font colours
 * tooltip text to show the value of the word's weight (e.g. LLH score)
 * save output results in csv file format
@@ -20,7 +20,7 @@ The java word clouds include a tooltip text feature to show the value of the wei
   * count words frequency
   * calculate log likelihood
   * get corpus size
-  * read CSV and other line delimeted files into arrays
+  * read CSV and other line delimited files into arrays
   * create your own word clouds by providing two arrays (String[] and Double[])
 
 
