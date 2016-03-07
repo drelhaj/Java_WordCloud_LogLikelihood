@@ -28,7 +28,7 @@ public class LlhCalculator {
 	 *            size of the reference corpus in words
 	 * @return double value
 	 */
-	public static double logLikeliHood(int word1Freq, int word2Freq, int corpus1Size, int corpus2Size) {
+	public static double logLikeliHood(double word1Freq, double word2Freq, double corpus1Size, double corpus2Size) {
 		double llh = 0;
 		double e1p1 = (corpus1Size * (word1Freq + word2Freq));
 		double e1p2 = (corpus1Size + corpus2Size);

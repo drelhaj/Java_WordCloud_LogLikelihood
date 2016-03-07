@@ -9,8 +9,8 @@ package com.stats;
 
 public class WordStats {
 
-	protected int wordCount;
-	protected int corpusSize;
+	protected double wordCount;
+	protected double corpusSize;
 
 	/**
 	 * gets word count and corpus size (number of words). Didn't add sets
@@ -19,17 +19,17 @@ public class WordStats {
 	 * @param wordCount
 	 * @param corpusSize
 	 */
-	public WordStats(int wordCount, int corpusSize) {
+	public WordStats(double wordCount, double corpusSize) {
 
 		this.wordCount = wordCount;
 		this.corpusSize = corpusSize;
 	}
 
-	public int getWordCount() {
+	public double getWordCount() {
 		return wordCount;
 	}
 
-	public int getCorpusSizse() {
+	public double getCorpusSizse() {
 		return corpusSize;
 	}
 
