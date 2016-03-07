@@ -8,6 +8,22 @@ support log likelihood values as the keywords weight, basically the bigger the v
 
 The java word clouds include a tooltip text feature to show the value of the weight used.
 
+# Features
+* Language independent
+* random colouring
+* Create Log likelihood and word frequency word clouds
+* can also create word clouds for a user chosen weight value you just need to provide an array of double values
+* you can drag drop words to match font colours
+* tooltip text to show the value of the word's weight (e.g. LLH score)
+* save output results in csv file format
+* methods and classes are stand alone the tool can be used to deal with large text files to:
+  * count words frequency
+  * calculate log likelihood
+  * get corpus size
+  * read CSV and other line delimited files into arrays
+  * create your own word clouds by providing two arrays (String[] and Double[])
+
+
 # Requirements
 * Requires java to run, the system was not tested on Java 8 but considering the library used it should run smoothly.
 * Has been tested on both Linux and Windows and run smoothly on both.
